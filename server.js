@@ -49,5 +49,6 @@ app.post('/api/whatsapp/run-daily', async (req,res)=>{
 
 app.get('/api/whatsapp/webhook-status',(req,res)=>res.json({ok:true,configured:Boolean(ACCESS_TOKEN && PHONE_NUMBER_ID && GRAPH_VERSION!=='vXX.X'),dailyTime:DAILY_TIME}));
 
-app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'index.html')));
+// Express 5 requires named wildcards. This version also matches the root URL.
+app.get('/{*splat}',(req,res)=>res.sendFile(path.join(__dirname,'index.html')));
 app.listen(PORT,()=>console.log(`Miora app running on http://localhost:${PORT}`));
