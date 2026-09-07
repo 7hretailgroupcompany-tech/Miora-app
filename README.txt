@@ -11,3 +11,6 @@ PHONE INSTALL:
 IMPORTANT:
 - Opening the HTML directly as file:// may not enable PWA installation/service worker.
 - Real WhatsApp automation requires Meta WhatsApp Business Platform credentials, approved templates, customer opt-in, and the included backend connector configured on a secure server.
+
+
+V6 update: PWA icons are compatible with root-level GitHub uploads. Backend also includes /api/whatsapp/run-daily and /api/whatsapp/webhook-status. GitHub Pages runs only the frontend; the Node backend must be deployed separately for real WhatsApp sending.
